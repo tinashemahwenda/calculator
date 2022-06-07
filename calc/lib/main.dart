@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepOrange[50],
+      backgroundColor: Colors.deepPurple[100],
       body: Column(
         children: [
           Expanded(child: Container()),
@@ -63,7 +63,13 @@ class _HomePageState extends State<HomePage> {
                               crossAxisCount: 4),
                       itemBuilder: (BuildContext context, int index) {
                         return MyButton(
-                            Colors.deepOrange, buttons[index], Colors.white);
+                            isOperator(buttons[index])
+                                ? Colors.deepPurple
+                                : Colors.deepPurple[50],
+                            buttons[index],
+                            isOperator(buttons[index])
+                                ? Colors.deepPurple
+                                : Colors.deepPurple[50]);
                       })))
         ],
       ),
@@ -71,7 +77,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   bool isOperator(String x) {
-    if (x == '%' || x == 'x' || x == '+' || x == '-' || x == '=') {
+    if (x == '%' || x == 'x' || x == '/' || x == '+' || x == '-' || x == '=') {
       return true;
     }
     return false;
