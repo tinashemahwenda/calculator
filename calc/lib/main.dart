@@ -24,11 +24,15 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepOrange,
+      backgroundColor: Colors.deepOrange[100],
       body: Column(
         children: [
           Expanded(child: Container()),
-          Expanded(child: Container())
+          Expanded(
+            flex: 2,
+            child: Container(
+              color: Colors.deepOrange,
+            ))
         ],
       ),
       ),
