@@ -24,8 +24,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Calculator'),
+      backgroundColor: Colors.deepOrange,
+      body: Column(
+        children: [
+          Expanded(child: Container()),
+          Expanded(child: Container())
+        ],
+      ),
       ),
     );
   }
