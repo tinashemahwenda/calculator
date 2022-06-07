@@ -11,7 +11,15 @@ class MyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(20),
-      child: Container(),
+      child: Container(
+        color: color,
+        child: Center(
+          child: Text(
+            buttonText,
+            style: TextStyle(color: textColor),
+          ),
+        ),
+      ),
     );
   }
 }
