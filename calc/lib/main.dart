@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: HomePage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -22,6 +23,29 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final List<String> buttons = [
+    'C',
+    'DEL',
+    '%',
+    '/',
+    '9',
+    '8',
+    '7',
+    'x',
+    '6',
+    '5',
+    '4',
+    '-',
+    '1',
+    '2',
+    '3',
+    '+',
+    '0',
+    '.',
+    'ANS',
+    '=',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,8 +56,15 @@ class _HomePageState extends State<HomePage> {
           Expanded(
               flex: 2,
               child: Container(
-                child: MyButton(Colors.deepOrange, '0', Colors.white),
-              ))
+                  child: GridView.builder(
+                      itemCount: buttons.length,
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 4),
+                      itemBuilder: (BuildContext context, int index) {
+                        return MyButton(
+                            Colors.deepOrange, buttons[index], Colors.white);
+                      })))
         ],
       ),
     );
