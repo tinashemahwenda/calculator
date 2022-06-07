@@ -29,12 +29,11 @@ class _HomePageState extends State<HomePage> {
         children: [
           Expanded(child: Container()),
           Expanded(
-            flex: 2,
-            child: Container(
-              color: Colors.deepOrange,
-            ))
+              flex: 2,
+              child: Container(
+                color: Colors.deepOrange,
+              ))
         ],
-      ),
       ),
     );
   }
