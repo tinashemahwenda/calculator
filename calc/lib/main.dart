@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                               buttons[index],
                               isOperator(buttons[index])
                                   ? Colors.white
-                                  : Colors.deepPurple);
+                                  : Colors.grey);
                         }
                       })))
         ],
