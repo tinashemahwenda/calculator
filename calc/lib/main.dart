@@ -62,14 +62,22 @@ class _HomePageState extends State<HomePage> {
                           const SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 4),
                       itemBuilder: (BuildContext context, int index) {
-                        return MyButton(
-                            isOperator(buttons[index])
-                                ? Colors.deepPurple
-                                : Colors.deepPurple[50],
-                            buttons[index],
-                            isOperator(buttons[index])
-                                ? Colors.deepPurple
-                                : Colors.deepPurple[50]);
+                        if (index == 0) {
+                          return MyButton(
+                              Colors.green, buttons[index], Colors.white);
+                        } else if (index == 1) {
+                          return MyButton(
+                              Colors.green, buttons[index], Colors.white);
+                        } else {
+                          return MyButton(
+                              isOperator(buttons[index])
+                                  ? Colors.deepPurple
+                                  : Colors.deepPurple[50],
+                              buttons[index],
+                              isOperator(buttons[index])
+                                  ? Colors.white
+                                  : Colors.deepPurple);
+                        }
                       })))
         ],
       ),
