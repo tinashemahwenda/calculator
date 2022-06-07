@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                               Colors.green, buttons[index], Colors.white);
                         } else if (index == 1) {
                           return MyButton(
-                              Colors.green, buttons[index], Colors.white);
+                              Colors.red, buttons[index], Colors.white);
                         } else {
                           return MyButton(
                               isOperator(buttons[index])
@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                               buttons[index],
                               isOperator(buttons[index])
                                   ? Colors.white
-                                  : Colors.black);
+                                  : Colors.deepPurple);
                         }
                       })))
         ],
