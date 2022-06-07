@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple[100],
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           Expanded(child: Container()),
@@ -72,11 +72,11 @@ class _HomePageState extends State<HomePage> {
                           return MyButton(
                               isOperator(buttons[index])
                                   ? Colors.deepPurple
-                                  : Colors.deepPurple[50],
+                                  : Colors.deepPurple[100],
                               buttons[index],
                               isOperator(buttons[index])
                                   ? Colors.white
-                                  : Colors.grey);
+                                  : Colors.black);
                         }
                       })))
         ],
