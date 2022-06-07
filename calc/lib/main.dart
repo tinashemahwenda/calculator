@@ -1,3 +1,4 @@
+import 'package:calc/buttons.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -28,7 +29,11 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: [
           Expanded(child: Container()),
-          Expanded(flex: 2, child: Container())
+          Expanded(
+              flex: 2,
+              child: Container(
+                child: MyButton(Colors.deepOrange, '0', Colors.white),
+              ))
         ],
       ),
     );
